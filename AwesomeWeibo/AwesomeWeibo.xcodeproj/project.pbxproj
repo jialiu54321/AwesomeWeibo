@@ -8,12 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		25CE8CEA1D4879CC0069D660 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25CE8CE91D4879CC0069D660 /* AppDelegate.swift */; };
-		25CE8CEC1D4879CC0069D660 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25CE8CEB1D4879CC0069D660 /* ViewController.swift */; };
 		25CE8CEF1D4879CC0069D660 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25CE8CED1D4879CC0069D660 /* Main.storyboard */; };
 		25CE8CF11D4879CC0069D660 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 25CE8CF01D4879CC0069D660 /* Assets.xcassets */; };
 		25CE8CF41D4879CC0069D660 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25CE8CF21D4879CC0069D660 /* LaunchScreen.storyboard */; };
 		25CE8CFF1D4879CC0069D660 /* AwesomeWeiboTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25CE8CFE1D4879CC0069D660 /* AwesomeWeiboTests.swift */; };
 		25CE8D0A1D4879CC0069D660 /* AwesomeWeiboUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25CE8D091D4879CC0069D660 /* AwesomeWeiboUITests.swift */; };
+		25CE8D181D489BF20069D660 /* Classes in Resources */ = {isa = PBXBuildFile; fileRef = 25CE8D171D489BF20069D660 /* Classes */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +36,6 @@
 /* Begin PBXFileReference section */
 		25CE8CE61D4879CC0069D660 /* AwesomeWeibo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AwesomeWeibo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		25CE8CE91D4879CC0069D660 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		25CE8CEB1D4879CC0069D660 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		25CE8CEE1D4879CC0069D660 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		25CE8CF01D4879CC0069D660 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		25CE8CF31D4879CC0069D660 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +46,7 @@
 		25CE8D051D4879CC0069D660 /* AwesomeWeiboUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AwesomeWeiboUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		25CE8D091D4879CC0069D660 /* AwesomeWeiboUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwesomeWeiboUITests.swift; sourceTree = "<group>"; };
 		25CE8D0B1D4879CC0069D660 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		25CE8D171D489BF20069D660 /* Classes */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Classes; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,8 +97,8 @@
 		25CE8CE81D4879CC0069D660 /* AwesomeWeibo */ = {
 			isa = PBXGroup;
 			children = (
+				25CE8D171D489BF20069D660 /* Classes */,
 				25CE8CE91D4879CC0069D660 /* AppDelegate.swift */,
-				25CE8CEB1D4879CC0069D660 /* ViewController.swift */,
 				25CE8CED1D4879CC0069D660 /* Main.storyboard */,
 				25CE8CF01D4879CC0069D660 /* Assets.xcassets */,
 				25CE8CF21D4879CC0069D660 /* LaunchScreen.storyboard */,
@@ -233,6 +233,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				25CE8CF41D4879CC0069D660 /* LaunchScreen.storyboard in Resources */,
+				25CE8D181D489BF20069D660 /* Classes in Resources */,
 				25CE8CF11D4879CC0069D660 /* Assets.xcassets in Resources */,
 				25CE8CEF1D4879CC0069D660 /* Main.storyboard in Resources */,
 			);
@@ -259,7 +260,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				25CE8CEC1D4879CC0069D660 /* ViewController.swift in Sources */,
 				25CE8CEA1D4879CC0069D660 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
