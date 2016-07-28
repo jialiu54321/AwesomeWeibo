@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vWk-L7-OXO">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <scenes>
+        <!--Discover-->
+        <scene sceneID="UzG-YR-zdd">
+            <objects>
+                <tableViewController id="UxZ-nF-WxX" customClass="DiscoverViewController" customModule="AwesomeWeibo" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="xW0-fr-41n">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="dataSource" destination="UxZ-nF-WxX" id="uca-Sm-ocl"/>
+                            <outlet property="delegate" destination="UxZ-nF-WxX" id="u2A-CD-kv8"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Discover" id="1h1-BG-ZAL"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iic-1i-2PE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="786" y="648"/>
+        </scene>
+        <!--Discover-->
+        <scene sceneID="o3t-bl-feR">
+            <objects>
+                <navigationController id="vWk-L7-OXO" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Discover" image="tabBar_DiscoverIcon" id="Ucn-k4-D0L"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="cyb-eZ-W9Z">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="UxZ-nF-WxX" kind="relationship" relationship="rootViewController" id="oOU-UB-DQg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2yC-az-1yc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="70" y="648"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="tabBar_DiscoverIcon" width="33" height="33"/>
+    </resources>
+</document>

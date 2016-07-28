@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="8r8-ga-b53">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <scenes>
+        <!--Home-->
+        <scene sceneID="ubb-oK-t3d">
+            <objects>
+                <tableViewController id="2Zn-fK-AzO" customClass="HomeViewController" customModule="AwesomeWeibo" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="ctq-yc-5W5">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="dataSource" destination="2Zn-fK-AzO" id="nRM-2s-lVe"/>
+                            <outlet property="delegate" destination="2Zn-fK-AzO" id="REL-c1-3jI"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Home" id="ph1-PR-mPa"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EMC-0n-uvY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="786" y="-722"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="BLJ-pq-X2l">
+            <objects>
+                <navigationController id="8r8-ga-b53" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Home" image="tabBar_HomeIcon" id="gq9-bZ-NMt"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hZC-zy-Hs0">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="2Zn-fK-AzO" kind="relationship" relationship="rootViewController" id="AsS-2s-G1A"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d0d-hF-hNA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="70" y="-722"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="tabBar_HomeIcon" width="33" height="33"/>
+    </resources>
+</document>

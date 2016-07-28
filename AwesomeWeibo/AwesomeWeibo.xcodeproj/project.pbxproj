@@ -14,6 +14,16 @@
 		25CE8CFF1D4879CC0069D660 /* AwesomeWeiboTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25CE8CFE1D4879CC0069D660 /* AwesomeWeiboTests.swift */; };
 		25CE8D0A1D4879CC0069D660 /* AwesomeWeiboUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25CE8D091D4879CC0069D660 /* AwesomeWeiboUITests.swift */; };
 		25CE8D181D489BF20069D660 /* Classes in Resources */ = {isa = PBXBuildFile; fileRef = 25CE8D171D489BF20069D660 /* Classes */; };
+		25CE8D3B1D49C62C0069D660 /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25CE8D3A1D49C62C0069D660 /* DiscoverViewController.swift */; };
+		25CE8D3D1D49C6310069D660 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25CE8D3C1D49C6310069D660 /* HomeViewController.swift */; };
+		25CE8D3F1D49C6360069D660 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25CE8D3E1D49C6360069D660 /* MessageViewController.swift */; };
+		25CE8D411D49C63A0069D660 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25CE8D401D49C63A0069D660 /* ProfileViewController.swift */; };
+		25CE8D431D49C7430069D660 /* Discover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25CE8D421D49C7430069D660 /* Discover.storyboard */; };
+		25CE8D451D49C7960069D660 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25CE8D441D49C7960069D660 /* Home.storyboard */; };
+		25CE8D471D49C7E10069D660 /* Message.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25CE8D461D49C7E10069D660 /* Message.storyboard */; };
+		25CE8D491D49C81E0069D660 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25CE8D481D49C81E0069D660 /* Profile.storyboard */; };
+		25CE8D4C1D49C9CC0069D660 /* null.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25CE8D4A1D49C9CC0069D660 /* null.storyboard */; };
+		25CE8D501D49CA600069D660 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25CE8D4F1D49CA600069D660 /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +57,16 @@
 		25CE8D091D4879CC0069D660 /* AwesomeWeiboUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwesomeWeiboUITests.swift; sourceTree = "<group>"; };
 		25CE8D0B1D4879CC0069D660 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		25CE8D171D489BF20069D660 /* Classes */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Classes; sourceTree = "<group>"; };
+		25CE8D3A1D49C62C0069D660 /* DiscoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DiscoverViewController.swift; path = Classes/Discover/DiscoverViewController.swift; sourceTree = "<group>"; };
+		25CE8D3C1D49C6310069D660 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = Classes/Home/HomeViewController.swift; sourceTree = "<group>"; };
+		25CE8D3E1D49C6360069D660 /* MessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MessageViewController.swift; path = Classes/Message/MessageViewController.swift; sourceTree = "<group>"; };
+		25CE8D401D49C63A0069D660 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileViewController.swift; path = Classes/Profile/ProfileViewController.swift; sourceTree = "<group>"; };
+		25CE8D421D49C7430069D660 /* Discover.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Discover.storyboard; path = Classes/Discover/Discover.storyboard; sourceTree = "<group>"; };
+		25CE8D441D49C7960069D660 /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Home.storyboard; path = Classes/Home/Home.storyboard; sourceTree = "<group>"; };
+		25CE8D461D49C7E10069D660 /* Message.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Message.storyboard; path = Classes/Message/Message.storyboard; sourceTree = "<group>"; };
+		25CE8D481D49C81E0069D660 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Profile.storyboard; path = Classes/Profile/Profile.storyboard; sourceTree = "<group>"; };
+		25CE8D4B1D49C9CC0069D660 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/null.storyboard; sourceTree = "<group>"; };
+		25CE8D4F1D49CA600069D660 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = Classes/MainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,7 +119,17 @@
 			children = (
 				25CE8D171D489BF20069D660 /* Classes */,
 				25CE8CE91D4879CC0069D660 /* AppDelegate.swift */,
+				25CE8D4F1D49CA600069D660 /* MainViewController.swift */,
+				25CE8D3A1D49C62C0069D660 /* DiscoverViewController.swift */,
+				25CE8D3C1D49C6310069D660 /* HomeViewController.swift */,
+				25CE8D3E1D49C6360069D660 /* MessageViewController.swift */,
+				25CE8D401D49C63A0069D660 /* ProfileViewController.swift */,
 				25CE8CED1D4879CC0069D660 /* Main.storyboard */,
+				25CE8D4A1D49C9CC0069D660 /* null.storyboard */,
+				25CE8D461D49C7E10069D660 /* Message.storyboard */,
+				25CE8D441D49C7960069D660 /* Home.storyboard */,
+				25CE8D421D49C7430069D660 /* Discover.storyboard */,
+				25CE8D481D49C81E0069D660 /* Profile.storyboard */,
 				25CE8CF01D4879CC0069D660 /* Assets.xcassets */,
 				25CE8CF21D4879CC0069D660 /* LaunchScreen.storyboard */,
 				25CE8CF51D4879CC0069D660 /* Info.plist */,
@@ -234,8 +264,13 @@
 			files = (
 				25CE8CF41D4879CC0069D660 /* LaunchScreen.storyboard in Resources */,
 				25CE8D181D489BF20069D660 /* Classes in Resources */,
+				25CE8D451D49C7960069D660 /* Home.storyboard in Resources */,
 				25CE8CF11D4879CC0069D660 /* Assets.xcassets in Resources */,
+				25CE8D471D49C7E10069D660 /* Message.storyboard in Resources */,
+				25CE8D491D49C81E0069D660 /* Profile.storyboard in Resources */,
+				25CE8D4C1D49C9CC0069D660 /* null.storyboard in Resources */,
 				25CE8CEF1D4879CC0069D660 /* Main.storyboard in Resources */,
+				25CE8D431D49C7430069D660 /* Discover.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,7 +295,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25CE8D411D49C63A0069D660 /* ProfileViewController.swift in Sources */,
+				25CE8D3B1D49C62C0069D660 /* DiscoverViewController.swift in Sources */,
 				25CE8CEA1D4879CC0069D660 /* AppDelegate.swift in Sources */,
+				25CE8D501D49CA600069D660 /* MainViewController.swift in Sources */,
+				25CE8D3D1D49C6310069D660 /* HomeViewController.swift in Sources */,
+				25CE8D3F1D49C6360069D660 /* MessageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,6 +350,14 @@
 				25CE8CF31D4879CC0069D660 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		25CE8D4A1D49C9CC0069D660 /* null.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				25CE8D4B1D49C9CC0069D660 /* Base */,
+			);
+			name = null.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
