@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		25000A8E1D4AB3AC00FE413E /* UIButton-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25000A8D1D4AB3AC00FE413E /* UIButton-Extension.swift */; };
+		25000A901D4B1E0500FE413E /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25000A8F1D4B1E0500FE413E /* BaseViewController.swift */; };
+		25000A921D4B20AD00FE413E /* VisitorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25000A911D4B20AD00FE413E /* VisitorView.swift */; };
+		25000A941D4B20FC00FE413E /* VisitorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25000A931D4B20FC00FE413E /* VisitorView.xib */; };
+		25000A961D4C89CD00FE413E /* TitleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25000A951D4C89CD00FE413E /* TitleButton.swift */; };
+		25000A991D4C935B00FE413E /* PopOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25000A971D4C935B00FE413E /* PopOverViewController.swift */; };
+		25000A9A1D4C935B00FE413E /* PopOverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25000A981D4C935B00FE413E /* PopOverViewController.xib */; };
 		25CE8CEA1D4879CC0069D660 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25CE8CE91D4879CC0069D660 /* AppDelegate.swift */; };
 		25CE8CEF1D4879CC0069D660 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25CE8CED1D4879CC0069D660 /* Main.storyboard */; };
 		25CE8CF11D4879CC0069D660 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 25CE8CF01D4879CC0069D660 /* Assets.xcassets */; };
@@ -44,6 +51,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		25000A8D1D4AB3AC00FE413E /* UIButton-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIButton-Extension.swift"; path = "Classes/Tools/Category/UIButton-Extension.swift"; sourceTree = "<group>"; };
+		25000A8F1D4B1E0500FE413E /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseViewController.swift; path = AwesomeWeibo/Classes/Main/Visitor/BaseViewController.swift; sourceTree = "<group>"; };
+		25000A911D4B20AD00FE413E /* VisitorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VisitorView.swift; path = Classes/Main/Visitor/VisitorView.swift; sourceTree = "<group>"; };
+		25000A931D4B20FC00FE413E /* VisitorView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = VisitorView.xib; path = Classes/Main/Visitor/VisitorView.xib; sourceTree = "<group>"; };
+		25000A951D4C89CD00FE413E /* TitleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TitleButton.swift; path = Classes/Tools/TitleButton.swift; sourceTree = "<group>"; };
+		25000A971D4C935B00FE413E /* PopOverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PopOverViewController.swift; path = Classes/Home/UIPopOver/PopOverViewController.swift; sourceTree = "<group>"; };
+		25000A981D4C935B00FE413E /* PopOverViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PopOverViewController.xib; path = Classes/Home/UIPopOver/PopOverViewController.xib; sourceTree = "<group>"; };
 		25CE8CE61D4879CC0069D660 /* AwesomeWeibo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AwesomeWeibo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		25CE8CE91D4879CC0069D660 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		25CE8CEE1D4879CC0069D660 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -97,6 +111,7 @@
 		25CE8CDD1D4879CC0069D660 = {
 			isa = PBXGroup;
 			children = (
+				25000A8F1D4B1E0500FE413E /* BaseViewController.swift */,
 				25CE8CE81D4879CC0069D660 /* AwesomeWeibo */,
 				25CE8CFD1D4879CC0069D660 /* AwesomeWeiboTests */,
 				25CE8D081D4879CC0069D660 /* AwesomeWeiboUITests */,
@@ -120,11 +135,17 @@
 				25CE8D171D489BF20069D660 /* Classes */,
 				25CE8CE91D4879CC0069D660 /* AppDelegate.swift */,
 				25CE8D4F1D49CA600069D660 /* MainViewController.swift */,
+				25000A971D4C935B00FE413E /* PopOverViewController.swift */,
+				25000A981D4C935B00FE413E /* PopOverViewController.xib */,
+				25000A951D4C89CD00FE413E /* TitleButton.swift */,
+				25000A911D4B20AD00FE413E /* VisitorView.swift */,
 				25CE8D3A1D49C62C0069D660 /* DiscoverViewController.swift */,
 				25CE8D3C1D49C6310069D660 /* HomeViewController.swift */,
 				25CE8D3E1D49C6360069D660 /* MessageViewController.swift */,
 				25CE8D401D49C63A0069D660 /* ProfileViewController.swift */,
+				25000A931D4B20FC00FE413E /* VisitorView.xib */,
 				25CE8CED1D4879CC0069D660 /* Main.storyboard */,
+				25000A8D1D4AB3AC00FE413E /* UIButton-Extension.swift */,
 				25CE8D4A1D49C9CC0069D660 /* null.storyboard */,
 				25CE8D461D49C7E10069D660 /* Message.storyboard */,
 				25CE8D441D49C7960069D660 /* Home.storyboard */,
@@ -263,8 +284,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				25CE8CF41D4879CC0069D660 /* LaunchScreen.storyboard in Resources */,
+				25000A941D4B20FC00FE413E /* VisitorView.xib in Resources */,
 				25CE8D181D489BF20069D660 /* Classes in Resources */,
 				25CE8D451D49C7960069D660 /* Home.storyboard in Resources */,
+				25000A9A1D4C935B00FE413E /* PopOverViewController.xib in Resources */,
 				25CE8CF11D4879CC0069D660 /* Assets.xcassets in Resources */,
 				25CE8D471D49C7E10069D660 /* Message.storyboard in Resources */,
 				25CE8D491D49C81E0069D660 /* Profile.storyboard in Resources */,
@@ -296,10 +319,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				25CE8D411D49C63A0069D660 /* ProfileViewController.swift in Sources */,
+				25000A8E1D4AB3AC00FE413E /* UIButton-Extension.swift in Sources */,
 				25CE8D3B1D49C62C0069D660 /* DiscoverViewController.swift in Sources */,
 				25CE8CEA1D4879CC0069D660 /* AppDelegate.swift in Sources */,
+				25000A991D4C935B00FE413E /* PopOverViewController.swift in Sources */,
 				25CE8D501D49CA600069D660 /* MainViewController.swift in Sources */,
+				25000A901D4B1E0500FE413E /* BaseViewController.swift in Sources */,
+				25000A921D4B20AD00FE413E /* VisitorView.swift in Sources */,
 				25CE8D3D1D49C6310069D660 /* HomeViewController.swift in Sources */,
+				25000A961D4C89CD00FE413E /* TitleButton.swift in Sources */,
 				25CE8D3F1D49C6360069D660 /* MessageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -537,6 +565,7 @@
 				25CE8D101D4879CC0069D660 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		25CE8D111D4879CC0069D660 /* Build configuration list for PBXNativeTarget "AwesomeWeiboTests" */ = {
 			isa = XCConfigurationList;
@@ -545,6 +574,7 @@
 				25CE8D131D4879CC0069D660 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		25CE8D141D4879CC0069D660 /* Build configuration list for PBXNativeTarget "AwesomeWeiboUITests" */ = {
 			isa = XCConfigurationList;
@@ -553,6 +583,7 @@
 				25CE8D161D4879CC0069D660 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

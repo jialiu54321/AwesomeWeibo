@@ -27,7 +27,7 @@
         <scene sceneID="o3t-bl-feR">
             <objects>
                 <navigationController id="vWk-L7-OXO" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Discover" image="tabBar_DiscoverIcon" id="Ucn-k4-D0L"/>
+                    <tabBarItem key="tabBarItem" title="Discover" image="tabBar_DiscoverIcon" selectedImage="tabBar_DiscoverIcon_highlighted" id="Ucn-k4-D0L"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="cyb-eZ-W9Z">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -44,5 +44,6 @@
     </scenes>
     <resources>
         <image name="tabBar_DiscoverIcon" width="33" height="33"/>
+        <image name="tabBar_DiscoverIcon_highlighted" width="33" height="33"/>
     </resources>
 </document>

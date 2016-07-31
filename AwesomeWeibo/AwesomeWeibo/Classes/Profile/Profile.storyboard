@@ -27,7 +27,7 @@
         <scene sceneID="2PL-fQ-dv3">
             <objects>
                 <navigationController id="MrA-0e-hiS" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Profile" image="tabBar_ProfileIcon" id="BUs-Xf-JaK"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="tabBar_ProfileIcon" selectedImage="tabBar_ProfileIcon_highlighted" id="BUs-Xf-JaK"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="bio-I5-O8y">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -44,5 +44,6 @@
     </scenes>
     <resources>
         <image name="tabBar_ProfileIcon" width="33" height="33"/>
+        <image name="tabBar_ProfileIcon_highlighted" width="33" height="33"/>
     </resources>
 </document>

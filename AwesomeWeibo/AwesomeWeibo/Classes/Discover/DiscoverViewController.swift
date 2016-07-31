@@ -8,6 +8,11 @@
 
 import UIKit
 
-class DiscoverViewController: UITableViewController {
-
+class DiscoverViewController: BaseViewController {
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        visitorView.setVisitorViewInfo("VisitorView_Discover", tipLabelText: "Please login to receive more info. ")
+    }
 }

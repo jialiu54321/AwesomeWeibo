@@ -8,6 +8,12 @@
 
 import UIKit
 
-class ProfileViewController: UITableViewController {
+class ProfileViewController: BaseViewController {
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        visitorView.setVisitorViewInfo("VisitorView_Profile", tipLabelText: "Please login to get user profile. ")
+    }
 
 }

@@ -27,7 +27,7 @@
         <scene sceneID="x3R-VR-9Yg">
             <objects>
                 <navigationController id="ocv-cJ-t7e" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Message" image="tabBar_MessageIcon" id="sIr-lm-Qks"/>
+                    <tabBarItem key="tabBarItem" title="Message" image="tabBar_MessageIcon" selectedImage="tabBar_MessageIcon_highlighted" id="sIr-lm-Qks"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="xOU-WN-CjO">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -44,5 +44,6 @@
     </scenes>
     <resources>
         <image name="tabBar_MessageIcon" width="33" height="33"/>
+        <image name="tabBar_MessageIcon_highlighted" width="33" height="33"/>
     </resources>
 </document>

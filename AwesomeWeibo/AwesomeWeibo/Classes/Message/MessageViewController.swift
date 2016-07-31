@@ -8,6 +8,11 @@
 
 import UIKit
 
-class MessageViewController: UITableViewController {
+class MessageViewController: BaseViewController {
 
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        visitorView.setVisitorViewInfo("VisitorView_Message", tipLabelText: "Please login to send and receice messages.")
+    }
 }

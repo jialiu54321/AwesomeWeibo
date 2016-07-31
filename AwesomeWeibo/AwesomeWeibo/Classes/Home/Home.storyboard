@@ -27,7 +27,7 @@
         <scene sceneID="BLJ-pq-X2l">
             <objects>
                 <navigationController id="8r8-ga-b53" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Home" image="tabBar_HomeIcon" id="gq9-bZ-NMt"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="tabBar_HomeIcon" selectedImage="tabBar_HomeIcon_highlighted" id="gq9-bZ-NMt"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="hZC-zy-Hs0">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -44,5 +44,6 @@
     </scenes>
     <resources>
         <image name="tabBar_HomeIcon" width="33" height="33"/>
+        <image name="tabBar_HomeIcon_highlighted" width="33" height="33"/>
     </resources>
 </document>

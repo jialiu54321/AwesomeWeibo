@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="VisitorView" customModule="AwesomeWeibo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="visitordiscover_feed_image_smallicon" translatesAutoresizingMaskIntoConstraints="NO" id="EGG-VP-nd1" userLabel="wheel">
+                    <rect key="frame" x="213" y="112" width="175" height="175"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="visitordiscover_feed_mask_smallicon" translatesAutoresizingMaskIntoConstraints="NO" id="bB9-ex-aZM" userLabel="mask">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="400"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="400" id="XVC-ab-MLd"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please login to receive more info. " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BC9-8A-Pic" userLabel="TipLabel">
+                    <rect key="frame" x="190" y="341" width="220.5" height="18"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="220.5" id="qFU-t1-7EF"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="MalayalamSangamMN" family="Malayalam Sangam MN" pointSize="15"/>
+                    <color key="textColor" red="0.32941176470588235" green="0.47450980392156861" blue="0.50196078431372548" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S8N-xf-u2K">
+                    <rect key="frame" x="190" y="434" width="100" height="32"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="Kcr-kH-xNe"/>
+                        <constraint firstAttribute="height" constant="32" id="PYc-P7-kCf"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="MalayalamSangamMN" family="Malayalam Sangam MN" pointSize="16"/>
+                    <state key="normal" title="Register" backgroundImage="common_button_white_disable">
+                        <color key="titleColor" red="0.32941176470588235" green="0.47450980392156861" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wPH-4a-LhA">
+                    <rect key="frame" x="321" y="434" width="100" height="32"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="32" id="6IE-iK-5B2"/>
+                        <constraint firstAttribute="width" constant="100" id="UEh-ck-jtW"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="MalayalamSangamMN" family="Malayalam Sangam MN" pointSize="16"/>
+                    <state key="normal" title="Login" backgroundImage="common_button_white_disable">
+                        <color key="titleColor" red="0.3294117647" green="0.47450980390000003" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="VisitorView_Home" translatesAutoresizingMaskIntoConstraints="NO" id="5qZ-Ut-tsC" userLabel="iconView">
+                    <rect key="frame" x="240.5" y="189.5" width="120" height="120"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="120" id="5hz-Mw-33Z"/>
+                        <constraint firstAttribute="height" constant="120" id="eOx-EE-Izd"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="0.90980392156862744" green="0.9137254901960784" blue="0.90980392156862744" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="S8N-xf-u2K" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" constant="150" id="2gQ-CU-Lwo"/>
+                <constraint firstItem="wPH-4a-LhA" firstAttribute="centerY" secondItem="S8N-xf-u2K" secondAttribute="centerY" id="2xB-gt-bXr"/>
+                <constraint firstItem="5qZ-Ut-tsC" firstAttribute="centerX" secondItem="EGG-VP-nd1" secondAttribute="centerX" id="3lh-sm-p1J"/>
+                <constraint firstAttribute="trailing" secondItem="bB9-ex-aZM" secondAttribute="trailing" id="90z-4K-JLD"/>
+                <constraint firstItem="S8N-xf-u2K" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="DNX-Wx-g2R"/>
+                <constraint firstItem="wPH-4a-LhA" firstAttribute="trailing" secondItem="BC9-8A-Pic" secondAttribute="trailing" constant="10.5" id="Eu4-Xy-EcC"/>
+                <constraint firstItem="BC9-8A-Pic" firstAttribute="centerY" secondItem="EGG-VP-nd1" secondAttribute="centerY" constant="150" id="Jdo-9P-QCe"/>
+                <constraint firstItem="bB9-ex-aZM" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="LDz-Ed-kUl"/>
+                <constraint firstItem="BC9-8A-Pic" firstAttribute="leading" secondItem="S8N-xf-u2K" secondAttribute="leading" id="eWF-In-XVT"/>
+                <constraint firstItem="5qZ-Ut-tsC" firstAttribute="centerY" secondItem="EGG-VP-nd1" secondAttribute="centerY" constant="50" id="ecu-0O-gnw"/>
+                <constraint firstItem="EGG-VP-nd1" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="fRQ-yx-gYm"/>
+                <constraint firstItem="S8N-xf-u2K" firstAttribute="centerY" secondItem="EGG-VP-nd1" secondAttribute="centerY" id="hV8-9R-gtk"/>
+                <constraint firstItem="EGG-VP-nd1" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" constant="-100" id="oor-1A-o2H"/>
+                <constraint firstItem="bB9-ex-aZM" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="qiN-qV-hSc"/>
+                <constraint firstItem="BC9-8A-Pic" firstAttribute="centerX" secondItem="EGG-VP-nd1" secondAttribute="centerX" id="qwH-FC-vY5"/>
+                <constraint firstItem="S8N-xf-u2K" firstAttribute="leading" secondItem="BC9-8A-Pic" secondAttribute="leading" id="udY-UX-UiK"/>
+                <constraint firstItem="S8N-xf-u2K" firstAttribute="centerX" secondItem="EGG-VP-nd1" secondAttribute="centerX" id="yfc-op-ejc"/>
+            </constraints>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="DNX-Wx-g2R"/>
+                    <exclude reference="hV8-9R-gtk"/>
+                    <exclude reference="udY-UX-UiK"/>
+                    <exclude reference="yfc-op-ejc"/>
+                </mask>
+            </variation>
+            <connections>
+                <outlet property="iconView" destination="5qZ-Ut-tsC" id="k9O-bI-KRV"/>
+                <outlet property="loginBtn" destination="wPH-4a-LhA" id="np6-Ws-4RP"/>
+                <outlet property="registerBtn" destination="S8N-xf-u2K" id="OxU-fz-CqN"/>
+                <outlet property="rotatingWheel" destination="EGG-VP-nd1" id="58I-zy-EoE"/>
+                <outlet property="tipLabel" destination="BC9-8A-Pic" id="W5j-HF-YwN"/>
+            </connections>
+            <point key="canvasLocation" x="262" y="381"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="VisitorView_Home" width="300" height="300"/>
+        <image name="common_button_white_disable" width="7" height="9"/>
+        <image name="visitordiscover_feed_image_smallicon" width="175" height="175"/>
+        <image name="visitordiscover_feed_mask_smallicon" width="116" height="116"/>
+    </resources>
+</document>
