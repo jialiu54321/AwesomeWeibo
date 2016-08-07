@@ -14,10 +14,12 @@ class BaseViewController: UITableViewController {
     lazy var visitorView: VisitorView = VisitorView.visitorView();
     
     //MARK:- variables
-    var isLogin: Bool = true
+    var isLogin: Bool = UserAccountViewModel.shareInstance.isLogin()
     
     //MARK:- system callbacks
     override func loadView() {
+        
+        //choose which view to show
         isLogin ? super.loadView() : setUpVisitorView()
     }
     
@@ -35,15 +37,15 @@ extension BaseViewController {
     private func setUpVisitorView() {
         self.view = visitorView
         
-        visitorView.loginBtn.addTarget(self, action: "loginBtnClick", forControlEvents: .TouchUpInside)
-        visitorView.registerBtn.addTarget(self, action: "registerBtnClick", forControlEvents: .TouchUpInside)
+        visitorView.loginBtn.addTarget(self, action: #selector(BaseViewController.loginBtnClick), forControlEvents: .TouchUpInside)
+        visitorView.registerBtn.addTarget(self, action: #selector(BaseViewController.registerBtnClick), forControlEvents: .TouchUpInside)
         
     }
     
     private func setupNavigationItem() {
         
-        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Register", style: .Plain, target: self, action: "registerBtnClick")
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Login", style: .Plain, target: self, action: "loginBtnClick")
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Register", style: .Plain, target: self, action: #selector(BaseViewController.registerBtnClick))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Login", style: .Plain, target: self, action: #selector(BaseViewController.loginBtnClick))
     }
 }
 
@@ -56,6 +58,11 @@ extension BaseViewController {
     }
     @objc private func loginBtnClick() {
         print("loginBtnClick")
+        
+        let oauthVc = OAuthViewController()
+        //包装一个导航控制器
+        //let oauthNav = UINavigationController(rootViewController: oauthVc)
+        presentViewController(oauthVc, animated: true, completion: nil)
     }
 
 }

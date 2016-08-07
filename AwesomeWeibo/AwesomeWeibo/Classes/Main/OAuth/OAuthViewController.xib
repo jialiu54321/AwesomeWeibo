@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OAuthViewController" customModule="AwesomeWeibo" customModuleProvider="target">
+            <connections>
+                <outlet property="oauthNavItem" destination="Pop-uf-D31" id="UwN-7P-FOW"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="webView" destination="ouZ-nu-Tqp" id="6C6-m1-Djh"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HWr-E4-C7T">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="70"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="70" id="V4n-cm-Xvk"/>
+                    </constraints>
+                    <items>
+                        <navigationItem title="Login" id="Pop-uf-D31"/>
+                    </items>
+                </navigationBar>
+                <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ouZ-nu-Tqp">
+                    <rect key="frame" x="0.0" y="70" width="600" height="530"/>
+                    <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="51F-6F-Bqx"/>
+                    </connections>
+                </webView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="ouZ-nu-Tqp" firstAttribute="top" secondItem="HWr-E4-C7T" secondAttribute="bottom" id="2Iv-rX-172"/>
+                <constraint firstAttribute="trailing" secondItem="HWr-E4-C7T" secondAttribute="trailing" id="51d-bb-4pW"/>
+                <constraint firstItem="HWr-E4-C7T" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="69d-F6-vNc"/>
+                <constraint firstItem="ouZ-nu-Tqp" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="gy0-Uk-DT8"/>
+                <constraint firstItem="HWr-E4-C7T" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="mZp-lb-5Iy"/>
+                <constraint firstAttribute="trailing" secondItem="ouZ-nu-Tqp" secondAttribute="trailing" id="q3o-dK-piD"/>
+                <constraint firstAttribute="bottom" secondItem="ouZ-nu-Tqp" secondAttribute="bottom" id="z2v-6B-cOj"/>
+            </constraints>
+            <point key="canvasLocation" x="322" y="250"/>
+        </view>
+    </objects>
+</document>

@@ -12,15 +12,25 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
+    var defaultViewController: UIViewController? {
+        let isLogin = UserAccountViewModel.shareInstance.isLogin()
+        return isLogin ? WelcomeViewController() : UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController()
+    }
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
-        //appearance of Tab Bar
+        //Color setting
         UITabBar.appearance().tintColor = UIColor(colorLiteralRed: 157/255.0, green: 244/255.0, blue: 173/255.0, alpha: 1)
         UITabBar.appearance().barTintColor = UIColor(colorLiteralRed: 84/255.0, green: 121/255.0, blue: 128/255.0, alpha: 1)
         UINavigationBar.appearance().tintColor = UIColor(colorLiteralRed: 157/255.0, green: 244/255.0, blue: 173/255.0, alpha: 0.5)
         UINavigationBar.appearance().barTintColor = UIColor(colorLiteralRed: 84/255.0, green: 121/255.0, blue: 128/255.0, alpha: 0.5)
+        
+        //create the main interface
+        window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        window?.rootViewController = defaultViewController
+        window?.makeKeyAndVisible()
         
         return true
     }

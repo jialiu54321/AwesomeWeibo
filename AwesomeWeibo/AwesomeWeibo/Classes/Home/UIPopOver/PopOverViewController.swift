@@ -12,8 +12,6 @@ class PopOverViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        
     }
 
 }

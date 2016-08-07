@@ -40,7 +40,7 @@ extension MainViewController {
         composeBtn.center = CGPointMake(tabBar.center.x, tabBar.bounds.size.height * 0.5)
         
         //add listener
-        composeBtn.addTarget(self, action: "composeBtnClick", forControlEvents: .TouchUpInside)
+        composeBtn.addTarget(self, action: #selector(MainViewController.composeBtnClick), forControlEvents: .TouchUpInside)
     }
     
 //    /// adjust items in tabBar
