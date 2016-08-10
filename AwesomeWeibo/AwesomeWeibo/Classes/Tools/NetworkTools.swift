@@ -83,9 +83,9 @@ extension NetworkTools {
 //MARK:- request home page info
 //[[String: AnyObject]] means an array of dicts
 extension NetworkTools {
-    func loadStatuses(access_token: String, finished: (result: [[String: AnyObject]]?, error: NSError?) -> ()) {
+    func loadStatuses(since_id: Int, max_id: Int, access_token: String, finished: (result: [[String: AnyObject]]?, error: NSError?) -> ()) {
         let urlString = "https://api.weibo.com/2/statuses/home_timeline.json"
-        let parameters = ["access_token": access_token]
+        let parameters = ["access_token": access_token, "since_id": "\(since_id)", "max_id": "\(max_id)"]
         
         request(.GET, urlString: urlString, parameters: parameters) { (result, error) in
             guard let statusDict = (result as? [String: AnyObject]) else {

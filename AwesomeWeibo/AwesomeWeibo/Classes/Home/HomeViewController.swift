@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import SDWebImage
+import MJRefresh
 
 class HomeViewController: BaseViewController {
     
@@ -16,6 +18,7 @@ class HomeViewController: BaseViewController {
     private lazy var popOverAnimator: PopOverAnimator = PopOverAnimator {[weak self] (isPresented) -> () in
         self?.titleBtn.selected = isPresented
     }
+    private lazy var tipLabel: UILabel = UILabel()  //uiview for the top lab showing "xx new tweets"
     
     private lazy var statusViewModels: [StatusViewModel] = [StatusViewModel]()
     
@@ -30,11 +33,15 @@ class HomeViewController: BaseViewController {
         
         setupNavBar()
         
-        loadStatuses()
-        
-        //dynamically change the height of cell
-        tableView.rowHeight = UITableViewAutomaticDimension
+        //set the estimated height of cell
         tableView.estimatedRowHeight = 200
+        
+        //setup header and footer for refreshing
+        setupHeaderView()
+        setupFooterView()
+        
+        //setup tip label
+        setupTipLabel()
     }
 }
 
@@ -53,6 +60,32 @@ extension HomeViewController {
         titleBtn.addTarget(self, action: #selector(HomeViewController.titleBtnClick(_:)), forControlEvents: .TouchUpInside)//titleBtnClick有参数，所以要加冒号
         
         navigationItem.titleView = titleBtn
+    }
+    
+    private func setupHeaderView() {
+        let header = MJRefreshNormalHeader(refreshingTarget: self, refreshingAction: #selector(HomeViewController.loadNewStatuses))
+        
+        header.setTitle("pull to refresh", forState: .Idle)
+        header.setTitle("Release to refresh", forState: .Pulling)
+        header.setTitle("Refreshing...", forState: .Refreshing)
+        
+        tableView.mj_header = header
+        
+        tableView.mj_header.beginRefreshing()
+    }
+    
+    private func setupFooterView() {
+        tableView.mj_footer = MJRefreshAutoFooter(refreshingTarget: self, refreshingAction: #selector(HomeViewController.loadMoreStatuses))
+    }
+    
+    private func setupTipLabel() {
+        navigationController?.navigationBar.insertSubview(tipLabel, atIndex: 0)   //tip label添加到父控件中
+        tipLabel.frame = CGRect(x: 0, y: 10, width: UIScreen.mainScreen().bounds.width, height: 30)
+        tipLabel.backgroundColor = UIColor.orangeColor()
+        tipLabel.textColor = UIColor.whiteColor()
+        tipLabel.font = UIFont.systemFontOfSize(14)
+        tipLabel.textAlignment = .Center
+        tipLabel.hidden = true
     }
 }
 
@@ -76,8 +109,19 @@ extension HomeViewController {
 
 //MARK:- load home page info
 extension HomeViewController {
-    private func loadStatuses() {
-        NetworkTools.shareInstance.loadStatuses((UserAccountViewModel.shareInstance.account?.access_token)!) { (result, error) in
+    private func loadStatuses(isNewStatuses: Bool) {
+        
+        //get since_id and max_id
+        var since_id = 0
+        var max_id = 0
+        if isNewStatuses {
+            since_id = statusViewModels.first?.status?.mid ?? 0
+        } else {
+            max_id = statusViewModels.last?.status?.mid ?? 0
+            max_id = max_id == 0 ? 0 : max_id - 1
+        }
+        
+        NetworkTools.shareInstance.loadStatuses(since_id, max_id: max_id, access_token: (UserAccountViewModel.shareInstance.account?.access_token)!) { (result, error) in
             if error != nil {
                 print(error)
                 return
@@ -87,12 +131,67 @@ extension HomeViewController {
                 return
             }
             
+            var tempStatusesViewModels: [StatusViewModel] = [StatusViewModel]()
             for statusDict in resultArray {
-                self.statusViewModels.append(StatusViewModel(status: Status(dict: statusDict) ))
+                tempStatusesViewModels.append(StatusViewModel(status: Status(dict: statusDict) ))
             }
             
-            //refresh the table view
+            if isNewStatuses {
+                self.statusViewModels =  tempStatusesViewModels + self.statusViewModels //put new data in front of the old data
+            } else {
+                self.statusViewModels =  self.statusViewModels + tempStatusesViewModels
+            }
+            
+            //cache the image and then refresh the table view
+            self.cacheImage(tempStatusesViewModels)
+        }
+    }
+    
+    private func cacheImage(statusViewModels: [StatusViewModel]) {
+        
+        //异步操作放在group中
+        let group = dispatch_group_create()
+        
+        for statusViewModel in statusViewModels {
+            for picURL in statusViewModel.picURLs {
+                dispatch_group_enter(group)
+                SDWebImageManager.sharedManager().downloadImageWithURL(picURL, options: [], progress: nil, completed: { (_, _, _, _, _) in
+                    dispatch_group_leave(group)
+                })
+            }
+        }
+        
+        //refresh the table view
+        dispatch_group_notify(group, dispatch_get_main_queue()) { 
             self.tableView.reloadData()
+            
+            self.tableView.mj_header.endRefreshing()
+            self.tableView.mj_footer.endRefreshing()
+            
+            self.showTipLabel(statusViewModels.count)
+        }
+    }
+    
+    @objc private func loadNewStatuses() {
+        loadStatuses(true)
+    }
+    
+    @objc private func loadMoreStatuses() {
+        loadStatuses(false)
+    }
+    
+    private func showTipLabel(count: Int) {
+        tipLabel.hidden = false
+        tipLabel.text = count == 0 ? "No new tweets" : "\(count) new tweets"
+        
+        UIView.animateWithDuration(1.0, animations: { 
+            self.tipLabel.frame.origin.y = self.navigationController?.navigationBar.frame.height ?? 44
+            }) { (_) in
+                UIView.animateWithDuration(1.0, delay: 1.0, options: [], animations: { 
+                    self.tipLabel.frame.origin.y = 10
+                    }, completion: { (_) in
+                        self.tipLabel.hidden = true
+                })
         }
     }
 }
@@ -112,5 +211,10 @@ extension HomeViewController {
         cell.statusViewModel = statusViewModel
         
         return cell
+    }
+    
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        let statusViewModel = statusViewModels[indexPath.row]
+        return statusViewModel.cellHeight
     }
 }

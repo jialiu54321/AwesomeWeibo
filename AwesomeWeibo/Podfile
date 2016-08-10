@@ -11,6 +11,7 @@ pod 'AFNetworking'
 pod 'SDWebImage'
 pod 'SnapKit'
 pod 'SVProgressHUD'
+pod 'MJRefresh'
 
   target 'AwesomeWeiboTests' do
     inherit! :search_paths

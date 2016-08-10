@@ -13,6 +13,8 @@ class StatusViewModel: NSObject {
     //MARK:- properties
     var status: Status?
     
+    var cellHeight: CGFloat = 0
+    
     //MARK:- processed properties
     var sourceText: String?
     var createAtText: String?
@@ -21,6 +23,8 @@ class StatusViewModel: NSObject {
     var vipImage: UIImage?
     
     var profileURL: NSURL?
+    
+    var picURLs: [NSURL] = [NSURL]()
     
     //MARK:- init
     init(status: Status) {
@@ -57,9 +61,18 @@ class StatusViewModel: NSObject {
         //get profileURL
         let profileURLString = status.user?.profile_image_url ?? ""
         profileURL = NSURL(string: profileURLString)
+        
+        //get picURLs
+        let picURLDicts = status.pic_urls!.count != 0 ? status.pic_urls : status.retweeted_status?.pic_urls
+        if let picURLDicts = picURLDicts {
+            for picURLDict in picURLDicts {
+                guard let picURLString = picURLDict["thumbnail_pic"] else {
+                    continue
+                }
+                picURLs.append(NSURL(string: picURLString)!)
+            }
+        }
     }
-    
-    
 }
 
 
