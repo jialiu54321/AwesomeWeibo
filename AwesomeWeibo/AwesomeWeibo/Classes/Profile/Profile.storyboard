@@ -34,7 +34,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="gdd-A2-LkV" kind="relationship" relationship="rootViewController" id="RAL-4v-lJA"/>
+                        <segue destination="gdd-A2-LkV" kind="relationship" relationship="rootViewController" id="7u0-E3-Zwd"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pnv-Jp-aku" userLabel="First Responder" sceneMemberID="firstResponder"/>

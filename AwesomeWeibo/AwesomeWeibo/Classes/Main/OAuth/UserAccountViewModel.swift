@@ -13,7 +13,7 @@ class UserAccountViewModel {
     typealias SuccessCallBack = (isSuccess : Bool) -> ()
     
     //MARK:- singleton
-    static let shareInstance: UserAccountViewModel = UserAccountViewModel()
+    static var shareInstance: UserAccountViewModel = UserAccountViewModel()
 
     //MARK:- variables
     //sandbox path
