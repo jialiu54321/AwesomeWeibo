@@ -61,7 +61,8 @@ extension HomeViewController {
         navigationItem.rightBarButtonItem = UIBarButtonItem(customView: rightBtn)
         
         //set up navbar title menu
-        titleBtn.setTitle("coderwhy", forState: .Normal)
+        titleBtn.setTitle(UserAccountViewModel.shareInstance.account?.screen_name ?? "", forState: .Normal)
+        titleBtn.titleLabel?.font = UIFont.systemFontOfSize(14)
         
         titleBtn.addTarget(self, action: #selector(HomeViewController.titleBtnClick(_:)), forControlEvents: .TouchUpInside)//titleBtnClick有参数，所以要加冒号
         

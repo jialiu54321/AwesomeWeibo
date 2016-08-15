@@ -27,8 +27,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().tintColor = UIColor(colorLiteralRed: 157/255.0, green: 244/255.0, blue: 173/255.0, alpha: 0.5)
         UINavigationBar.appearance().barTintColor = UIColor(colorLiteralRed: 84/255.0, green: 121/255.0, blue: 128/255.0, alpha: 0.5)
         
-        
-        
         //create the main interface
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
         window?.rootViewController = defaultViewController
