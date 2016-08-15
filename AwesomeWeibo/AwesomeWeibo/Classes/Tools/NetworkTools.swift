@@ -64,6 +64,18 @@ extension NetworkTools {
     }
 }
 
+//MARK:- disable access_token
+extension NetworkTools {
+    func disableAccessToken(access_token: String) {
+        let urlString = "https://api.weibo.com/oauth2/revokeoauth2"
+        let parameters = ["access_token": access_token]
+        request(.POST, urlString: urlString, parameters: parameters) { (result, error) in
+            
+        }
+    }
+    
+}
+
 //MARK:- request user info
 extension NetworkTools {
     func loadUserInfo(access_token: String, uid: String, finished: (result: [String: AnyObject]?, error: NSError?) -> ()) {

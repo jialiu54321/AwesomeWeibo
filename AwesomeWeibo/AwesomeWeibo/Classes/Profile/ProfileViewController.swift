@@ -69,6 +69,8 @@ extension ProfileViewController {
 extension ProfileViewController {
     @objc private func signOutBtnClick() {
         
+        NetworkTools.shareInstance.disableAccessToken((UserAccountViewModel.shareInstance.account?.access_token)!)
+        
         try? NSFileManager.defaultManager().removeItemAtPath(UserAccountViewModel.shareInstance.accountPath)
         
         UserAccountViewModel.shareInstance = UserAccountViewModel()
