@@ -13,6 +13,22 @@ class MessageViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        visitorView.setVisitorViewInfo("VisitorView_Message", tipLabelText: "Please login to send and receice messages.")
+        if !isLogin {
+            visitorView.setVisitorViewInfo("VisitorView_Message", tipLabelText: "Please login to send and receice messages.")
+        }
+        
+        setupNavBar()
+        
+    }
+}
+
+//MARK:- set up UI
+extension MessageViewController {
+    private func setupNavBar() {
+        //set up navbar buttons
+        navigationItem.leftBarButtonItem = nil
+        navigationItem.rightBarButtonItem = nil
+    
+        navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor(), NSFontAttributeName: UIFont.systemFontOfSize(20)]
     }
 }

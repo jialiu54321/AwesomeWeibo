@@ -12,8 +12,25 @@ class ProfileViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        visitorView.setVisitorViewInfo("VisitorView_Profile", tipLabelText: "Please login to get user profile. ")
-    }
 
+        if !isLogin {
+            visitorView.setVisitorViewInfo("VisitorView_Profile", tipLabelText: "Please login to get user profile. ")
+        }
+
+        setupNavBar()
+        
+        //test 123
+        
+    }
+}
+
+//MARK:- set up UI
+extension ProfileViewController {
+    private func setupNavBar() {
+        //set up navbar buttons
+        navigationItem.leftBarButtonItem = nil
+        navigationItem.rightBarButtonItem = nil
+        
+        navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor(), NSFontAttributeName: UIFont.systemFontOfSize(20)]
+    }
 }
