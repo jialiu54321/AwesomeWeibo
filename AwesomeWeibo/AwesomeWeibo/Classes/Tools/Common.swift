@@ -21,3 +21,6 @@ let PicPickerRemovePhotoNote = "PicPickerRemovePhotoNote"
 let ShowPhotoBrowerNote = "ShowPhotoBrowerNote"
 let ShowPhotoBrowerIndexPathKey = "ShowPhotoBrowerIndexPathKey"
 let ShowPhotoBrowerPicUrlsKey = "ShowPhotoBrowerPicUrlsKey"
+
+//MARK:- constants for sign out notification
+let SignedOutNote = "SignedOutNote"

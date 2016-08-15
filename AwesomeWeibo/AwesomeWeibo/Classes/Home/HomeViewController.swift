@@ -31,6 +31,7 @@ class HomeViewController: BaseViewController {
         visitorView.addRotationAnim()
         
         if !isLogin {
+            setupTitleStyle()
             return
         }
         
@@ -53,6 +54,11 @@ class HomeViewController: BaseViewController {
 
 //MARK:- set up UI
 extension HomeViewController {
+    
+    private func setupTitleStyle() {
+        navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor(), NSFontAttributeName: UIFont.systemFontOfSize(20)]
+    }
+    
     private func setupNavBar() {
         //set up navbar buttons
         let leftBtn = UIButton(imageName: "NavBar_ProfileIcon", width: 25, height: 25)

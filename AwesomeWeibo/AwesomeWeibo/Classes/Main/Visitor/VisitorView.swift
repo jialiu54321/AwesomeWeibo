@@ -10,7 +10,6 @@ import UIKit
 
 class VisitorView: UIView {
     
-    
     //MARK:- view objects
     @IBOutlet weak var rotatingWheel: UIImageView!
     @IBOutlet weak var tipLabel: UILabel!
