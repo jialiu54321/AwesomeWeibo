@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="PicPickerCollectionViewCell" customModule="AwesomeWeibo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TeF-AJ-qXP" userLabel="AddBtn">
+                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                        <state key="normal" backgroundImage="compose_pic_add"/>
+                        <state key="highlighted" backgroundImage="compose_pic_add_highlighted"/>
+                        <connections>
+                            <action selector="addBtnClick:" destination="gTV-IL-0wX" eventType="touchUpInside" id="23x-cj-mO7"/>
+                        </connections>
+                    </button>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dg9-RB-bNk" userLabel="Image">
+                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                    </imageView>
+                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KPM-ak-vYP" userLabel="RemoveBtn">
+                        <rect key="frame" x="30" y="0.0" width="20" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="X6J-Yn-p0y"/>
+                            <constraint firstAttribute="width" constant="20" id="bId-hh-u5C"/>
+                        </constraints>
+                        <state key="normal" backgroundImage="compose_photo_close"/>
+                        <connections>
+                            <action selector="removeBtnClick:" destination="gTV-IL-0wX" eventType="touchUpInside" id="C5v-rr-Hkk"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottomMargin" secondItem="dg9-RB-bNk" secondAttribute="bottom" id="1d7-zB-5Dc"/>
+                <constraint firstAttribute="trailing" secondItem="TeF-AJ-qXP" secondAttribute="trailing" id="7jx-Ka-y9p"/>
+                <constraint firstAttribute="trailingMargin" secondItem="dg9-RB-bNk" secondAttribute="trailing" id="AOV-fQ-kKq"/>
+                <constraint firstAttribute="trailing" secondItem="KPM-ak-vYP" secondAttribute="trailing" id="ELf-Wk-bkJ"/>
+                <constraint firstItem="KPM-ak-vYP" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Fkp-Ga-v0G"/>
+                <constraint firstAttribute="bottom" secondItem="TeF-AJ-qXP" secondAttribute="bottom" id="KEk-Al-bsJ"/>
+                <constraint firstItem="TeF-AJ-qXP" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Tdc-gR-4fo"/>
+                <constraint firstItem="dg9-RB-bNk" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="topMargin" id="XW6-c0-9me"/>
+                <constraint firstAttribute="bottom" secondItem="dg9-RB-bNk" secondAttribute="bottom" id="YjV-rj-Wov"/>
+                <constraint firstItem="dg9-RB-bNk" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="eOS-kh-1Yz"/>
+                <constraint firstItem="TeF-AJ-qXP" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="guk-Me-pbh"/>
+                <constraint firstAttribute="trailing" secondItem="dg9-RB-bNk" secondAttribute="trailing" id="sIu-bC-Hky"/>
+                <constraint firstItem="dg9-RB-bNk" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leadingMargin" id="yRz-r4-gZ3"/>
+                <constraint firstItem="dg9-RB-bNk" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="zON-Bc-qpI"/>
+            </constraints>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="1d7-zB-5Dc"/>
+                    <exclude reference="AOV-fQ-kKq"/>
+                    <exclude reference="XW6-c0-9me"/>
+                    <exclude reference="yRz-r4-gZ3"/>
+                </mask>
+            </variation>
+            <connections>
+                <outlet property="addBtn" destination="TeF-AJ-qXP" id="1XT-pw-J8H"/>
+                <outlet property="imageView" destination="dg9-RB-bNk" id="qWM-UR-dWS"/>
+                <outlet property="removeBtn" destination="KPM-ak-vYP" id="WCB-Va-a21"/>
+            </connections>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="compose_photo_close" width="24" height="24"/>
+        <image name="compose_pic_add" width="70" height="70"/>
+        <image name="compose_pic_add_highlighted" width="70" height="70"/>
+    </resources>
+</document>

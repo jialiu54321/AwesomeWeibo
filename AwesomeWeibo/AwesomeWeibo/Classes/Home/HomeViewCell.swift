@@ -47,7 +47,9 @@ class HomeViewCell: UITableViewCell {
             membershipLevelImageView.image = statusViewModel.vipImage
             timeLabel.text = statusViewModel.createAtText
             sourceLabel.text = statusViewModel.sourceText != nil ? "From \(statusViewModel.sourceText!)" : ""
-            mainText.text = statusViewModel.status?.text
+            
+            mainText.attributedText = FindEmojicon.sharedInstance.findAttrString(statusViewModel.status?.text, font: mainText.font)
+            
             //set color of screenNameLable depending on whether the user is a member
             screenNameLable.textColor = statusViewModel.vipImage == nil ? UIColor.blackColor() : UIColor.orangeColor()
             
@@ -62,7 +64,9 @@ class HomeViewCell: UITableViewCell {
             //set retweetContent
             if statusViewModel.status?.retweeted_status != nil {
                 if let screen_name = statusViewModel.status?.retweeted_status?.user?.screen_name, retweeted_text = statusViewModel.status?.retweeted_status?.text {
-                    retweetContent.text = "@\(screen_name): \(retweeted_text)"
+                    
+                    let retweetText = "@\(screen_name): \(retweeted_text)"
+                    retweetContent.attributedText = FindEmojicon.sharedInstance.findAttrString(retweetText, font: retweetContent.font)
                     
                     retweetContentTopCons.constant = 15
                 }
@@ -120,7 +124,7 @@ extension HomeViewCell {
         
         //4 pics
         if count == 4 {
-            let imageCollectionViewWidth = imageViewWidth * 2 + gapBetweenPics
+            let imageCollectionViewWidth = imageViewWidth * 2 + gapBetweenPics + 1
             return CGSize(width: imageCollectionViewWidth, height: imageCollectionViewWidth)
         }
         

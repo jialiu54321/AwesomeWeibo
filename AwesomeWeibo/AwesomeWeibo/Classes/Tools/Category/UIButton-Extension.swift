@@ -44,6 +44,11 @@ extension UIButton {
         frame = CGRect(x: self.frame.origin.x, y: self.frame.origin.y, width: width, height: height)
     }
     
-    
-    
+    convenience init(title: String, fontSize: CGFloat, bgcolor: UIColor) {
+        self.init()
+        
+        setTitle(title, forState: .Normal)
+        titleLabel?.font = UIFont.systemFontOfSize(fontSize)
+        backgroundColor = bgcolor
+    }
 }

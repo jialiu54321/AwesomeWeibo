@@ -62,8 +62,9 @@ extension MainViewController {
 
 // MARK:- events listener
 extension MainViewController {
-    //private方便不会被添加到方法列表，解决方法是加上@objc
     @objc private func composeBtnClick() {
-        print("clicked")
+        let composeVC = ComposeViewController()
+        let composeNav = UINavigationController(rootViewController: composeVC)
+        presentViewController(composeNav, animated: true, completion: nil)
     }
 }

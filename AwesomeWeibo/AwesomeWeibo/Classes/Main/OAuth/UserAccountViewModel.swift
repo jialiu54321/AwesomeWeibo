@@ -19,6 +19,7 @@ class UserAccountViewModel {
     //sandbox path
     var accountPath: String {
         let accountPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true).first!
+        print(accountPath)
         return (accountPath as NSString).stringByAppendingPathComponent("account.plist")
     }
     var account: UserAccount?
@@ -55,7 +56,6 @@ extension UserAccountViewModel {
             }
             
             let account = UserAccount(dict: accountDict)
-            print(account)
             
             //get user info
             self.loadUserInfo(account, success: success)

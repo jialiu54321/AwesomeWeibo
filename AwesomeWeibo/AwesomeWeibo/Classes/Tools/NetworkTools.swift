@@ -29,7 +29,6 @@ class NetworkTools: AFHTTPSessionManager {
 
 //MARK:- request methods
 extension NetworkTools {
-    
     func request(requestType: RequestType, urlString: String, parameters: [String: AnyObject], finished: (result: AnyObject?, error: NSError?) -> ()) {
         
         //callbacks
@@ -65,7 +64,6 @@ extension NetworkTools {
     }
 }
 
-
 //MARK:- request user info
 extension NetworkTools {
     func loadUserInfo(access_token: String, uid: String, finished: (result: [String: AnyObject]?, error: NSError?) -> ()) {
@@ -98,4 +96,38 @@ extension NetworkTools {
     }
 }
 
+//MARK:- sending weibo
+extension NetworkTools {
+    func sendStatus(access_token: String, statusText: String, isSucess: (isSucess: Bool) -> ()) {
+        let urlString = "https://api.weibo.com/2/statuses/update.json"
+        let parameters = ["access_token": access_token, "status": statusText]
+        
+        request(.POST, urlString: urlString, parameters: parameters) { (result, error) in
+            if result != nil {
+                isSucess(isSucess: true)
+            } else {
+                print(error)
+                isSucess(isSucess: false)
+            }
+        }
+    }
+}
 
+//MARK:- sending weibo with pics
+extension NetworkTools {
+    func sendStatus(access_token: String, statusText: String, image: UIImage, isSucess: (isSucess: Bool) -> ()) {
+        let urlString = "https://api.weibo.com/2/statuses/upload.json"
+        let parameters = ["access_token": access_token, "status": statusText]
+        
+        POST(urlString, parameters: parameters, constructingBodyWithBlock: { (fromData) in
+            if let imageData = UIImageJPEGRepresentation(image, 0.5) {
+                fromData.appendPartWithFileData(imageData, name: "pic", fileName: "1.png", mimeType: "image/png")
+            }
+            }, success: { (_, _) in
+                isSucess(isSucess: true)
+            }) { (_, error) in
+                print(error)
+                isSucess(isSucess: false)
+        }
+    }
+}

@@ -22,6 +22,9 @@ class HomeViewController: BaseViewController {
     
     private lazy var statusViewModels: [StatusViewModel] = [StatusViewModel]()
     
+    private lazy var photoBrowerAnimator: PhotoBrowerAnimator = PhotoBrowerAnimator()
+    
+    
     //MARK:- system callbacks
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,6 +45,9 @@ class HomeViewController: BaseViewController {
         
         //setup tip label
         setupTipLabel()
+        
+        //setup notification observer
+        setupNotificationObservers()
     }
 }
 
@@ -87,6 +93,10 @@ extension HomeViewController {
         tipLabel.textAlignment = .Center
         tipLabel.hidden = true
     }
+    
+    private func setupNotificationObservers() {
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(HomeViewController.showPhotoBrower(_:)), name: ShowPhotoBrowerNote, object: nil)
+    }
 }
 
 //MARK:- event listeners
@@ -104,6 +114,27 @@ extension HomeViewController {
         
         //pop the viewcontroller
         presentViewController(popvc, animated: true, completion: nil)
+    }
+    
+    @objc private func showPhotoBrower(note: NSNotification) {
+        
+        let indexPath = note.userInfo![ShowPhotoBrowerIndexPathKey] as! NSIndexPath
+        let picUrls = note.userInfo![ShowPhotoBrowerPicUrlsKey] as! [NSURL]
+        let object = note.object as! PhotoBrowerAnimatorPresentedDelegate
+            
+        let photoBrowerVC = PhotoBrowerController(indexPath: indexPath, picUrls: picUrls)
+        
+        //set modalPresentationStyle to make sure that objects in current view is not hidden during presenting 
+        photoBrowerVC.modalPresentationStyle = .Custom
+        
+        //customize transitioningDelegate
+        photoBrowerVC.transitioningDelegate = photoBrowerAnimator
+        
+        photoBrowerAnimator.presentedDeletate = object 
+        photoBrowerAnimator.indexPath = indexPath
+        photoBrowerAnimator.dismissedDeletate = photoBrowerVC
+        
+        presentViewController(photoBrowerVC, animated: true, completion: nil)
     }
 }
 
