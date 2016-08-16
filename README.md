@@ -19,7 +19,7 @@ Post a weibo with a customized emoji and emoticons keyboard:
 <img src="http://i.imgur.com/kjjwXQj.gif" width="25%">
 
 Post a weibo with picture:  
-<img src="http://i.imgur.com/6umit0G.gif" width="25%">
+<img src="http://i.imgur.com/a4Fn6Sl.gif" width="25%">
 
 Sign out:  
 <img src="http://i.imgur.com/MAUviXW.gif" width="25%">
