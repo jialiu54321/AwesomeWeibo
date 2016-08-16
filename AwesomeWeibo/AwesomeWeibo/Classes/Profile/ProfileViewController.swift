@@ -59,7 +59,7 @@ extension ProfileViewController {
         //set signOutBtn
         tableView.addSubview(signOutBtn)
         signOutBtn.setTitle("Sign Out", forState: .Normal)
-        signOutBtn.backgroundColor = UIColor.redColor()
+        signOutBtn.backgroundColor = UIColor(red: 217/255.0, green: 83/255.0, blue: 79/255.0, alpha: 0.8)
         signOutBtn.frame = CGRect(x: UIScreen.mainScreen().bounds.width / 2 - 75, y: 200, width: 150, height: 32)
         signOutBtn.addTarget(self, action: #selector(ProfileViewController.signOutBtnClick), forControlEvents: .TouchUpInside)
     }

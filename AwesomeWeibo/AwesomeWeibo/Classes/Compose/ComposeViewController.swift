@@ -98,15 +98,15 @@ extension ComposeViewController {
             NetworkTools.shareInstance.sendStatus((UserAccountViewModel.shareInstance.account?.access_token)!, statusText: statusText, isSucess: finishedCallback)
         }
         
-        NetworkTools.shareInstance.sendStatus((UserAccountViewModel.shareInstance.account?.access_token)!, statusText: statusText) { (isSucess) in
-            if !isSucess {
-                SVProgressHUD.showErrorWithStatus("Failed")
-                return
-            }
-            
-            SVProgressHUD.showSuccessWithStatus("Successfully Posted!")
-            self.dismissViewControllerAnimated(true, completion: nil)
-        }
+//        NetworkTools.shareInstance.sendStatus((UserAccountViewModel.shareInstance.account?.access_token)!, statusText: statusText) { (isSucess) in
+//            if !isSucess {
+//                SVProgressHUD.showErrorWithStatus("Failed")
+//                return
+//            }
+//            
+//            SVProgressHUD.showSuccessWithStatus("Successfully Posted!")
+//            self.dismissViewControllerAnimated(true, completion: nil)
+//        }
     }
     
     @objc private func keyboardWillChangeFrame(note: NSNotification) {
