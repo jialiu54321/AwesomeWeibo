@@ -16,7 +16,7 @@ Customized photo browser:
 <img src="http://i.imgur.com/a1EM6aV.gif" width="25%">
 
 Post a weibo with a customized emoji and emoticons keyboard:  
-<img src="http://i.imgur.com/o5strX7.gif" width="25%">
+<img src="http://i.imgur.com/kjjwXQj.gif" width="25%">
 
 Post a weibo with picture:  
 <img src="http://i.imgur.com/6umit0G.gif" width="25%">
