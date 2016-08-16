@@ -19,10 +19,10 @@ Post a weibo with a customized emoji and emoticons keyboard:
 ![image](http://i.imgur.com/upbdtuJ.gif)
 
 Post a weibo with picture:
-![image](http://i.imgur.com/yU3bpmp.gif)
+<img src="http://i.imgur.com/yU3bpmp.gif" width="25%">
 
 Sign out:
-<img src="http://i.imgur.com/MAUviXW.gif" width="50%" height="50%">
+<img src="http://i.imgur.com/MAUviXW.gif" width="25%">
 
 ## License 许可
 
