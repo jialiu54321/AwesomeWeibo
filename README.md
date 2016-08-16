@@ -13,7 +13,7 @@ Scroll down to load more (infinitely scrolling view):
 <img src="http://i.imgur.com/J30d58r.gif" width="25%">
 
 Customized photo browser:  
-<img src="http://i.imgur.com/Z7uokMW.gif" width="25%">
+<img src="http://i.imgur.com/a2UJbHU.gif" width="25%">
 
 Post a weibo with a customized emoji and emoticons keyboard:  
 <img src="http://i.imgur.com/o5strX7.gif" width="25%">
