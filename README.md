@@ -22,7 +22,7 @@ Post a weibo with picture:
 ![image](http://i.imgur.com/yU3bpmp.gif)
 
 Sign out:
-![image](http://i.imgur.com/MAUviXW.gif)
+<img src="http://i.imgur.com/MAUviXW.gif" width="50%" height="50%">
 
 ## License 许可
 
