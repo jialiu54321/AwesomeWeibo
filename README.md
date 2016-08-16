@@ -1,8 +1,8 @@
 ![](http://i.imgur.com/LDfCXrI.png)
 
-# Fully Functionally Customized Weibo iOS App
+# AwesomeWeibo
 
-An iOS application provides full basic functions of Weibo (Chinese version of Twitter). 
+An iOS application provides full basic functions of Weibo (Chinese version of Twitter)
 
 ## Screen Shots
 
