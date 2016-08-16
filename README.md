@@ -10,7 +10,7 @@ Sign in using Oauth2/authorize:
 <img src="http://i.imgur.com/yOUnZiY.gif" width="25%">
 
 Scroll down to load more (infinitely scrolling view):  
-<img src="http://i.imgur.com/hZ9gMfNh.gif" width="25%">
+![](http://i.imgur.com/hZ9gMfN.gifv)
 
 Customized photo browser:  
 <img src="http://i.imgur.com/Z7uokMW.gif" width="25%">
